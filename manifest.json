@@ -1,0 +1,11 @@
+{
+    "id": "diacritic-fixer",
+    "name": "Diacritic Fixer",
+    "version": "1.0.0",
+    "minAppVersion": "0.9.12",
+    "description": "Automatically fixes separated diacritics in pasted text",
+    "author": "Floxicek",
+    "authorUrl": "https://github.com/floxicek",
+    "isDesktopOnly": false
+  }
+  

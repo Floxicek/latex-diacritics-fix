@@ -17,7 +17,7 @@ class DiacriticFixerPlugin extends Plugin {
     handlePaste(evt, editor) {
         // Get text from the clipboard event
         const text = evt.clipboardData.getData("text");
-        console.log("Original pasted text:", text);
+        console.log("Original pasted text", text);
 
         // Correct separated diacritic characters
         const correctedText = this.recombineDiacritics(text);
@@ -27,7 +27,8 @@ class DiacriticFixerPlugin extends Plugin {
         editor.replaceSelection(correctedText);
 
         // Prevent default paste behavior to avoid double pasting
-        evt.preventDefault();
+        if (text != "")
+            evt.preventDefault();
     }
 
     recombineDiacritics(text) {
